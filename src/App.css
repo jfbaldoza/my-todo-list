@@ -1,38 +1,130 @@
 .App {
   text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputBox {
+  width: 400px;
+  height: 28px;
+  border: 0;
+  outline: 0;
+  color: rgb(60, 66, 87);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 4px 8px;
+  min-height: 28px;
+  vertical-align: middle;
+  transition: background-color .24s,box-shadow .24s;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.24s, 0.24s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputBox:focus{
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+}
+
+.button-26 {
+appearance: button;
+background-color: #1652F0;
+border: 1px solid #1652F0;
+border-radius: 4px;
+box-sizing: border-box;
+color: #FFFFFF;
+cursor: pointer;
+font-family: Graphik,-apple-system,system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+font-size: 1rem;
+line-height: 1.15;
+overflow: visible;
+padding: 9px 16px;
+position: relative;
+text-align: center;
+text-transform: none;
+transition: all 80ms ease-in-out;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.button-26:disabled {
+opacity: .5;
+}
+
+.button-26:focus {
+outline: 0;
+}
+
+.button-26:hover {
+background-color: #0A46E4;
+border-color: #0A46E4;
+}
+
+.button-26:active {
+background-color: #0039D7;
+border-color: #0039D7;
+}
+
+.task {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
+  padding: 0;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.taskList {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-31 {
+  background-color: #222;
+  border-radius: 50%;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  max-width: none;
+  outline: none;
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-31:hover,
+.button-31:focus {
+  opacity: .75;
 }
