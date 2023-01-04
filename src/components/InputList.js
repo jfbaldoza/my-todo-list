@@ -8,12 +8,16 @@ const InputList = (props) => {
     const createTask = (e) => {
 
         e.preventDefault();
-        let newTask = task
+        let newTask = {
+            task,
+            idx: Math.floor(Math.random() * 10000)
+        }
         let taskArr = [...taskList, newTask]
         console.log(taskArr)
         setTaskList(taskArr);
         e.target.reset();
     }
+
     return (
         <div className='inputList'>
             <form onSubmit={ createTask }>
@@ -24,7 +28,10 @@ const InputList = (props) => {
                 taskList.map((element, index) => {
                     return <ShowInput
                     key={ index }
-                    task={ element }
+                    task={ element.task }
+                    idx={ element.idx}
+                    taskList={ taskList }
+                    setTaskList={ setTaskList}
                     />
                 })
             }
